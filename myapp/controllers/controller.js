@@ -1,7 +1,7 @@
 const toRegister = require('../models/db_query');
 
-module.exports = class IP_Member {
-	Register(req, res, next) {
+module.exports = class Member {
+	postRegister(req, res, next) {
 
 		var dt1 = new Date();
 		const ip_Addr = {
