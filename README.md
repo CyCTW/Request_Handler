@@ -12,12 +12,16 @@ A simple request handling program for practicing.
 ```
 git clone https://github.com/CyCTW/Request_Handler
 ```
-2. Download the needed npm package by following command.
+2. move to the directory inside.
+```
+cd ./Request_Handler/myapp
+```
+3. Download the needed npm package by following command.
 
 ```
 npm install
 ```
-3. start the program.
+4. start the program.
 ```
 npm start
 ```
@@ -28,6 +32,17 @@ Now, you can see the X-RateLimit-Remaining and X-RateLimit-Reset.
 ![](https://i.imgur.com/zjBdbHm.png)
 
 ## Definition:
-**X-RateLimit-Remaining:** The remain time to visit the page for **this IP address**. If it becomes 0, then you'll got a 429 status code(Too many requests).
+- **X-RateLimit-Remaining:** The remain time to visit the page for **this IP address**. If it becomes 0, then you'll got a 429 status code(Too many requests).
  
-**X-RateLimit-Reset:** The remain time to reset X-RateLimit-Remaining. (one hour at first)
+- **X-RateLimit-Reset:** The remain time to reset X-RateLimit-Remaining. (one hour at first)
+
+## Testing:
+I also write some simple test function (not complete). One function is for testing connection, others are for X-RateLimit-Remaining. 
+
+- Try this command below in CLI to test:
+```
+npm test
+```
+Then you should see the result.
+
+![](https://i.imgur.com/6SdfRq4.png)
