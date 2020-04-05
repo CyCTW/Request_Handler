@@ -1,7 +1,7 @@
-const req_limit = 5;
-const time_limit = 1000 * 10;
+const req_limit = 1000;
+const time_limit = 1000 * 60 * 60;
 const db = require('./connection_db');
-
+const exp_time = "60:00";
 module.exports = class Query {
     static check_database(ip) {
         return new Promise( (resolve, reject) => {
@@ -27,7 +27,7 @@ module.exports = class Query {
                     return;
                 }
                 
-                result.time = "00:10";
+                result.time = exp_time;
                 result.remain_req = req_limit;
                 resolve(result);
             });
@@ -58,7 +58,7 @@ module.exports = class Query {
         let result = {};
         const expire = parseInt(rows[0].expire_time, 10);
         const now = new Date().getTime();
-        console.log(rows);
+       // console.log(rows);
         return new Promise((resolve, reject) => {
             var diff = expire - now;
         

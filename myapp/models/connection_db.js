@@ -11,8 +11,8 @@ const connection = mysql.createConnection({
 connection.connect(err => {
 	if(err)
 		console.log('connecting error');
-	else
-		console.log('connection success');
+	// else
+		// console.log('connection success');
 	
 
 });
@@ -20,7 +20,7 @@ connection.connect(err => {
 connection.query("DELETE FROM connect_info", function(err, result){
 	if(err)
 		console.log(err);
-	else
-		console.log("clear table");
+	// else
+		// console.log("clear table");
 });
 module.exports = connection;
