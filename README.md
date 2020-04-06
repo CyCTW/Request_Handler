@@ -8,20 +8,20 @@ A simple request handling program for practicing.
 ## Requestment:
 ![](https://i.imgur.com/0zQCjmn.png)
 ## How to use:
-1. Clone this repository to your local directory you want.
+### 1. Clone this repository to your local directory you want
 ```
 git clone https://github.com/CyCTW/Request_Handler
 ```
-2. move to the directory inside.
+### 2. Move to the repository's root directory
 ```
 cd ./Request_Handler/myapp
 ```
-3. Download the needed npm package by following command.
+### 3. Download the needed npm package by following command
 
 ```
 npm install
 ```
-4. create databases and table by MySQL
+### 4. Create databases and table by MySQL
 
 **Create Database:**
 ```
@@ -36,24 +36,26 @@ mysql> CREATE TABLE connect_info(
     -> remain_req INT not null
     -> );
 ```
-5. create .env file in repository root directory
-
-**ex:**
+### 5. Create .env file and write DATABASE INFORMATION in repository's root directory
+```
+touch .env
+```
+**.env example:**
 ```
 HOST = 'localhost'
 DATABASE_USER = 'YOUR_USERNAME'
 DATABASE_PASSWORD = 'YOUR_PASSWORD'
 DATABASE = 'YOUR_DATABASE_NAME'
-
 ```
-6. start the program.
+### 6. Execute the program
 ```
 npm start
 ```
 *******
-- If succeed, you can go to *loaclhost:3000*, it should be a blank page.
+If succeed, you can go to *loaclhost:3000*, it should be a blank page.
 Then open the page source (maybe press F12), choose **Network**, and click **localhost**. 
 Now, you can see the X-RateLimit-Remaining and X-RateLimit-Reset.
+
 ![](https://i.imgur.com/zjBdbHm.png)
 
 ## Definition:
