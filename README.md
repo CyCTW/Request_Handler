@@ -21,7 +21,32 @@ cd ./Request_Handler/myapp
 ```
 npm install
 ```
-4. start the program.
+4. create databases and table by MySQL
+
+**Create Database:**
+```
+mysql> CREATE DATABASE 'YOUR_DATABASE_NAME';
+```
+**Create Table:**
+```
+mysql> CREATE TABLE connect_info(
+    -> id INT AUTO_INCREMENT PRIMARY KEY,
+    -> ip VARCHAR(30) not null unique,
+    -> expire_time VARCHAR(30) not null,
+    -> remain_req INT not null
+    -> );
+```
+5. create .env file in repository root directory
+
+**ex:**
+```
+HOST = 'localhost'
+DATABASE_USER = 'YOUR_USERNAME'
+DATABASE_PASSWORD = 'YOUR_PASSWORD'
+DATABASE = 'YOUR_DATABASE_NAME'
+
+```
+6. start the program.
 ```
 npm start
 ```
